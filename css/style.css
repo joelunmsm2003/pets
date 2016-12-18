@@ -1,0 +1,27 @@
+.texthome{
+
+	font-size: 39px;
+	color: #f84d67;
+
+	margin-top: -221px;
+}
+
+		#imagen {
+			width:100%;
+			height:375px;
+			position:relative;
+		}
+		
+
+		img {
+    width: 100%;
+    height: auto;
+}
+
+.logo{
+
+	width: 45px;
+	float: left;
+}
+
+.navbar-brand

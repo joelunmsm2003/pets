@@ -1,48 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <title></title>
 
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
-    
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="app.js"></script>
+
+
+
 </head>
-<body>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+<body ng-app="myApp" ng-controller="myCtrl">
 
-      <img src='logo.png' class='logo'>
-      <a class="navbar-brand" href="#">Pet</a>
-      
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-       
-       
-       
-      </ul>
-      
-      <ul class="nav navbar-nav navbar-right">
-         <li><a href="agentes">Conviertete en cuidador</a></li>
-       
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-
+<div ng-include="'header.html'"></div>
 
 
 <div class='container'>
@@ -51,22 +26,29 @@
 
 <h3>Queremos conocerte</h3>
 
-<form>
+<form ng-submit='registra(data)'>
   <div class="form-group">
     <label for="email">Nombre:</label>
-    <input type="email" class="form-control" id="email">
+    <input required type="text" class="form-control" ng-model='data.nombre' id="email">
   </div>
+
+    <div class="form-group">
+    <label for="email">Password:</label>
+    <input required type="password" class="form-control" ng-model='data.password' id="email">
+  </div>
+
+
   <div class="form-group">
     <label for="email">Direccion:</label>
-    <input type="email" class="form-control" id="email">
+    <input required type="text" class="form-control" ng-model='data.direccion' id="email">
   </div>
     <div class="form-group">
     <label for="email">Nombre de tu mascota:</label>
-    <input type="email" class="form-control" id="email">
+    <input required type="text" class="form-control" ng-model='data.nombre_mascota' id="email">
   </div>
     <div class="form-group">
     <label for="email">Raza:</label>
-    <input type="email" class="form-control" id="email">
+    <input required type="text" class="form-control" ng-model='data.raza' id="email">
   </div>
 
     <div class='panel panel-primary'>
@@ -99,7 +81,7 @@
 
      <div class="form-group">
     <label for="email">Horario de comida:</label>
-    <input type="email" class="form-control" id="email">
+    <input required type="text" class="form-control" ng-model='data.horario' id="email">
   </div>
 
     <div class="form-group">

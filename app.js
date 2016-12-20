@@ -3,7 +3,7 @@ var app = angular.module('myApp', []);
 
 app.controller('myCtrl', function($scope, $http) {
 
-host='http://localhost:8000'
+host='http://45.55.131.59:8000'
 
 $scope.ola ='fjjfjfjf'
 

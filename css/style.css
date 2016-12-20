@@ -24,4 +24,33 @@
 	float: left;
 }
 
-.navbar-brand
+.cuidador{
+
+	font-size: 40px;
+	color: #9fa0a5;
+	font-family: 'Raleway', sans-serif;
+}
+
+.help{
+
+	margin-top:5em;
+}
+
+.img-rounded{
+
+	    width: 162px;
+    padding: 1em;
+    margin-top: 5em;
+}
+
+.helping{
+
+	margin: 0 0 10px;
+    color: #f84d67;;
+    font-size: 21px;
+}
+
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+
+    height: 244px;
+}

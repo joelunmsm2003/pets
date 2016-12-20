@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.min.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <script src="app.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+<div ng-include="'header.html'"></div>
+
+
+
+
+
+<div class='container' >
+
+<center><h1>Convierte en cuidador <img src='https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTQnWtBm255Nl6tiXhzbCTwyu0Vq8g8CvUtrifQF8ur4Q0_vmaM' style='width: 44px;'></h1></center>
+<hr></hr>
+<div class='col-md-6 panel'>
+
+<div class='panel-body cuidador'>
+
+<img class='img-responsive'  src='http://media.mnn.com/assets/images/2014/07/girl-hugging-dog.jpg'>
+
+Aceptamos cuidadores y paseadores con o sin experiencia.
+Los únicos requisitos son: amor por los perros y brindar lo mejor de tí
+
+</div>
+
+</div>
+
+<div class='col-md-6'>
+
+
+<form ng-submit='cuidador(data)'  role="form">
+  <legend>Registrate</legend>
+
+  <div class="form-group">
+    <label for="">Nombre</label>
+    <input required type="text" ng-model='data.name' class="form-control" id="" placeholder="Nombre">
+  </div>
+
+  <div class="form-group">
+    <label for="">Direccion</label>
+    <input required type="text" ng-model='data.direccion' class="form-control" id="" placeholder="Direccion">
+  </div>
+
+  <div class="form-group">
+    <label for="">Porque te gustan los perros?</label>
+    <input required type="text" ng-model='data.porque' class="form-control" id="" placeholder="Porque">
+  </div>
+
+    <div class="form-group">
+    <label for="">Distrito</label>
+    <select required class='form-control' ng-options="item as item.label for item in items track by item.id" ng-model="data.item"><option value="" disabled selected>Distrito</option></select>
+  </div>
+
+      <div class="form-group">
+    <label for="">Photo</label>
+    <input required type="text" ng-model='data.photo' class="form-control" id="" placeholder="URL de tu photo">
+  </div>
+
+
+
+
+    <div class="form-group">
+    <label for="">Contraseña</label>
+    <input ng-model='data.password' required type="password" class="form-control" id="" placeholder="Contraseña">
+  </div>
+  
+  
+
+  <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+</form>
+
+</div>
+
+
+</div>
+
+</body>
+</html>

@@ -1,103 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+<title></title>
 
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
 
-      <img src='logo.png' class='logo'>
-      <a class="navbar-brand" href="#">Pet</a>
-      
-    </div>
+<link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-       
-       
-       
-      </ul>
-      
-      <ul class="nav navbar-nav navbar-right">
-         <li><a href="agentes.html">Conviertete en cuidador</a></li>
-       
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+<link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
+<script src="app.js"></script>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+
+<div ng-include="'header.html'"></div>
 
 <div class='container'>
 
-<h3>Estos son nuestros agentes</h3>
+<h3>Elige a uno de nuestros cuidadores cerca a ti </h3>
 
 <div class='row'>
 
-<div class='col-md-4'>
+<div class='col-md-3'>
 
- <div class="panel panel-primary">
-      <div class="panel-heading">Carlos</div>
-      <div class="panel-body"><img class='img-responsive' src='http://granadatrabaja.com/wp-content/uploads/2016/09/IMG_1113.jpg'>
+<select class='form-control' ng-options="item as item.label for item in items track by item.id" ng-model="selected"><option value="" disabled selected>Ubicacion</option></select>
+
+</div>
+
+</div>
+
+<hr></hr>
+
+<div class='row'>
 
 
-      
-      <button class='btn btn-primary'>Escoger</button></div>
+
+
+<div class='col-md-4' ng-repeat="model in cuidadores track by model.id">
+
+     <div class="panel panel-default">
+          <div class="panel-heading">{{model.username}}</div>
+
+
+   
+          <div class="panel-body"><img class='img-responsive' src='{{model.photo}}'>
+
+
+
+          <hr></hr>
+
+          <p>{{model.direccion}}</p>
+
+          <p>{{model.porque}}</p>
+          <a class='btn btn-danger' href='registra.html'>Escoger</button></a>
+
+        </div>
 
     </div>
 
 </div>
 
-<div class='col-md-4'>
-
- <div class="panel panel-primary">
-      <div class="panel-heading">Juan</div>
-      <div class="panel-body"><img class='img-responsive' src='http://blog.gudog.com/wp-content/uploads/2014/06/602130_10153403906485641_1870540913_n.jpg'>
-
-
-      <button class='btn btn-primary'>Escoger</button></div>
-
-
-    </div>
-
 </div>
-
-<div class='col-md-4'>
-
- <div class="panel panel-primary">
-      <div class="panel-heading">Ana</div>
-      <div class="panel-body"><img class='img-responsive' src='http://static.consumer.es/www/imgs/2012/12/cuidadores-perros-profesionales-navidad-vacaciones-art.jpg'>
-
-      <button class='btn btn-primary'>Escoger</button>
-      </div>
-
-    </div>
-
-</div>
-
-
-
-</div>
-</div>
-
 
 </div>
 

@@ -63,6 +63,7 @@ dfn {
 h1 {
   margin: .67em 0;
   font-size: 2em;
+  color:#48dc6a;
 }
 mark {
   color: #000;
@@ -1148,7 +1149,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #ff532d;
 }
 .sr-only {
   position: absolute;
@@ -3344,25 +3345,25 @@ fieldset[disabled] .btn-warning.focus {
 }
 .btn-danger {
   color: #fff;
-  background-color: #d9534f;
+  background-color: #ff532d;
   border-color: #d43f3a;
 }
 .btn-danger:focus,
 .btn-danger.focus {
   color: #fff;
-  background-color: #c9302c;
+  background-color: #ff532d;
   border-color: #761c19;
 }
 .btn-danger:hover {
   color: #fff;
-  background-color: #c9302c;
+  background-color: #ff532d;
   border-color: #ac2925;
 }
 .btn-danger:active,
 .btn-danger.active,
 .open > .dropdown-toggle.btn-danger {
   color: #fff;
-  background-color: #c9302c;
+  background-color: #ff532d;
   border-color: #ac2925;
 }
 .btn-danger:active:hover,
@@ -3392,11 +3393,11 @@ fieldset[disabled] .btn-danger:focus,
 .btn-danger.disabled.focus,
 .btn-danger[disabled].focus,
 fieldset[disabled] .btn-danger.focus {
-  background-color: #d9534f;
+  background-color: #ff532d;
   border-color: #d43f3a;
 }
 .btn-danger .badge {
-  color: #d9534f;
+  color: #ff532d;
   background-color: #fff;
 }
 .btn-link {
@@ -4903,11 +4904,11 @@ a.label:focus {
   background-color: #ec971f;
 }
 .label-danger {
-  background-color: #d9534f;
+  background-color: #ff532d;
 }
 .label-danger[href]:hover,
 .label-danger[href]:focus {
-  background-color: #c9302c;
+  background-color: #ff532d;
 }
 .badge {
   display: inline-block;
@@ -5186,7 +5187,7 @@ a.thumbnail.active {
   background-image:         linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
 }
 .progress-bar-danger {
-  background-color: #d9534f;
+  background-color: #ff532d;
 }
 .progress-striped .progress-bar-danger {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
@@ -5686,9 +5687,9 @@ button.list-group-item-danger.active:focus {
   border-color: #ddd;
 }
 .panel-default > .panel-heading {
-  color: #333;
-  background-color: #f5f5f5;
-  border-color: #ddd;
+  color: #fff;
+  background-color: #fd4966;
+  border-color: #fd4966;
 }
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top-color: #ddd;
